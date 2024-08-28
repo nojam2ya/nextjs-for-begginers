@@ -1,4 +1,4 @@
-import { API_URL } from "../app/(home)/page";
+import {API_URL} from "../app/constants";
 
 async function getMovie(id: string) {
   const res = await fetch(`${API_URL}/${id}`);
