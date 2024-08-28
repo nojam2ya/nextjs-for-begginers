@@ -1,8 +1,8 @@
-import Link from "next/link";
-import {API_URL} from "../constants";
+import Link from 'next/link';
+import { API_URL } from '../constants';
 
 export const metadata = {
-  title: "Home",
+  title: 'Home',
 };
 
 async function getMovies(): Promise<
@@ -34,7 +34,7 @@ export default async function HomePage() {
   const movies = await getMovies();
   return (
     <div>
-      {movies.map((movie) => (
+      {movies.map(movie => (
         <li key={movie.id}>
           <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
         </li>
